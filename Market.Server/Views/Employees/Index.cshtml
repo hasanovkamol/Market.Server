@@ -4,13 +4,16 @@
     ViewData["Title"] = "Index";
 }
 <link href="~/css/icon-style.css" rel="stylesheet" type="text/css" />
-<div class="col-md-14">
+<div class="col-sm-12">
+     <a class="btn btn-info-outline" asp-area="" asp-controller="Categories" asp-action="Create">Add New Position</a>
+    <a class="btn btn-info-outline" asp-area="" asp-controller="Categories" asp-action="Index">List To Position</a>
+
     <div class="card card-block sameheight-item">
         <div class="card-header bordered">
             <div class="header-block">
                 <h3 class="title">
                     <label href="/Sources" class="nounderline">
-                        <i class="fa fa-pencil-square-o"></i> Product
+                        <i class="fa fa-pencil-square-o"></i> Employee
                     </label>
                 </h3>
             </div>
@@ -43,9 +46,10 @@
                                 Email
                             </th>
                             <th>
-                               Age
+                                Age
                             </th>
-                            <th>Phone
+                            <th>
+                                Phone
                             </th>
 
                         </tr>
@@ -66,7 +70,7 @@
                                     @Html.DisplayFor(modelItem => item.Email)
                                 </td>
                                 <td>
-                                    @Html.DisplayFor(modelItem =>  item.BirthDay.Year)
+                                    @Html.DisplayFor(modelItem => item.BirthDay.Year)
                                 </td>
                                 <td>
                                     @Html.DisplayFor(modelItem => item.Phone_Nomer)

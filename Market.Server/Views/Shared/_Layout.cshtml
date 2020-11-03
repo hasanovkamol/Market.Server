@@ -74,6 +74,11 @@
                                     <i class="fa fa-pencil-square-o"></i> OrderDetail
                                 </a>
                             </li>
+                            <li id="Orders" class="@ViewData["active_ord"]">
+                                <a asp-area="" asp-controller="Orders" asp-action="Index">
+                                    <i class="fa fa-pencil-square-o"></i> Orders
+                                </a>
+                            </li>
                             <li id="Positions" class="@ViewData["active_pos"]">
                                 <a asp-area="" asp-controller="Positions" asp-action="Index">
                                     <i class="menu-icon fa fa-th"></i> Positions
@@ -84,14 +89,14 @@
                                     <i class="menu-icon fa fa-desktop"></i> Categorie
                                 </a>
                             </li>
-                                <li>
-                                    <a href="profile.html">
-                                        <i class="menu-icon fa fa-picture-o"></i>
-                                        <span class="menu-text">Profile</span>
-                                    </a>
-                                </li>
+                            <li>
+                                <a href="profile.html">
+                                    <i class="menu-icon fa fa-picture-o"></i>
+                                    <span class="menu-text">Profile</span>
+                                </a>
+                            </li>
 
-                            </ul>
+                        </ul>
 </nav>
                 </div>
             </aside>
