@@ -11,8 +11,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Npgsql.EntityFrameworkCore;
-using Npgsql.EntityFrameworkCore.PostgreSQL;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Hosting;
 
@@ -33,8 +31,9 @@ namespace Market.Server
 
             services.AddDbContext<MarketContext>(options =>
             {
-                options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"));
-            }); services.AddIdentity<IdentityUser, IdentityRole>()
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+            });
+            services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddDefaultUI()
                 .AddRoles<IdentityRole>()
                 .AddRoleManager<RoleManager<IdentityRole>>()
