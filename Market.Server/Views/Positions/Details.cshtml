@@ -4,21 +4,20 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Details</h2>
+<div class="col-md-10">
+    <div class="card card-block sameheight-item">
+        <dl class="row">
+            <dt>
+                @Html.DisplayNameFor(model => model.Pasition_Name)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Pasition_Name)
+            </dd>
+        </dl>
+    </div>
+</div>
 
 <div>
-    <h4>Position</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Pasition_Name)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Pasition_Name)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-info" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a class="btn btn-danger-outline" asp-action="Index">Back to List</a>
 </div>

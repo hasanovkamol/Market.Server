@@ -22,9 +22,9 @@ namespace Market.Server.Controllers
         }
 
         // GET: Delivers
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? PageNumber)
         {
-            return View(await _context.delivers.ToListAsync());
+            return View(await PageList<Deliver>.CreateAsync(_context.delivers.AsNoTracking(),PageNumber ??1));
         }
 
         // GET: Delivers/Details/5

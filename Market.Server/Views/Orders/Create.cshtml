@@ -4,27 +4,39 @@
     ViewData["Title"] = "Create";
 }
 
-<h2>Create</h2>
 
-<h4>Order</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
+<div class="col-md-8">
+    <div class="card card-block sameheight-item">
+        <div class="title-block">
+            <div class="header-block">
+                <h3 class="title">@ViewData["Title"]</h3>
+            </div>
+        </div>
+        @using (Html.BeginForm())
+        {
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="EmployeeId" class="control-label"></label>
-                <select asp-for="EmployeeId" class ="form-control" asp-items="ViewBag.EmployeeId"></select>
+                <select asp-for="EmployeeId" class="form-control" asp-items="ViewBag.EmployeeId"></select>
             </div>
             <div class="form-group">
                 <label asp-for="OrderDate" class="control-label"></label>
                 <input asp-for="OrderDate" class="form-control" />
                 <span asp-validation-for="OrderDate" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+            <div class="form-group row">
+                <div class="col-sm-offset-2 col-sm-12 text-right">
+                    <a asp-action="Index" class="btn btn-secondary">
+                        <i class="fa fa-arrow-circle-left"></i>
+                        Ortga
+                    </a>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-align-left fa-save"></i>
+                        Saqlash
+                    </button>
+                </div>
             </div>
-        </form>
+        }
     </div>
 </div>
 

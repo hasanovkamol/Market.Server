@@ -4,57 +4,56 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Details</h2>
+<div class="col-md-10">
+    <div class="card card-block sameheight-item">
+        <dl class="row">
+            <dt class="col-sm-5">
+                @Html.DisplayNameFor(model => model.FullName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.FullName)
+            </dd>
+            <dt class="col-sm-5">
+                @Html.DisplayNameFor(model => model.Company_Name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Company_Name)
+            </dd>
+            <dt class="col-sm-5">
+                @Html.DisplayNameFor(model => model.Company_Phone)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Company_Phone)
+            </dd>
+            <dt class="col-sm-5">
+                @Html.DisplayNameFor(model => model.Contat_Name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Contat_Name)
+            </dd>
+            <dt class="col-sm-5">
+                @Html.DisplayNameFor(model => model.Contact_Title)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Contact_Title)
+            </dd>
+            <dt class="col-sm-5">
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+            <dt class="col-sm-5">
+                @Html.DisplayNameFor(model => model.Contact_Date)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Contact_Date)
+            </dd>
+        </dl>
+    </div>
+</div>
 
 <div>
-    <h4>Deliver</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.FullName)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.FullName)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Company_Name)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Company_Name)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Company_Phone)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Company_Phone)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Contat_Name)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Contat_Name)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Contact_Title)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Contact_Title)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Address)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Contact_Date)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Contact_Date)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-info" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a class="btn btn-info-outline" asp-action="Index">Back to List</a>
 </div>
