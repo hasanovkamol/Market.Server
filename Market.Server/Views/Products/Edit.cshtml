@@ -1,0 +1,75 @@
+﻿@model Data.Entity.Product
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="col-md-6">
+    <div class="card card-block sameheight-item">
+        <div class="title-block">
+            <div class="header-block">
+                <h3 class="title">@ViewData["Title"]</h3>
+            </div>
+        </div>
+
+        <form asp-action="Edit" method="post">
+            <input asp-for="Id" type="hidden" class="form-control" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Product_Name" class="control-label"></label>
+                <input asp-for="Product_Name" class="form-control" />
+                <span asp-validation-for="Product_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Unit_Price" class="control-label"></label>
+                <input asp-for="Unit_Price" class="form-control" />
+                <span asp-validation-for="Unit_Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UnitInStock" class="control-label"></label>
+                <input asp-for="UnitInStock" class="form-control" />
+                <span asp-validation-for="UnitInStock" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UnitInOrder" class="control-label"></label>
+                <input asp-for="UnitInOrder" class="form-control" />
+                <span asp-validation-for="UnitInOrder" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastDate" class="control-label"></label>
+                <input asp-for="LastDate" class="form-control" />
+                <span asp-validation-for="LastDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EnterDate" class="control-label"></label>
+                <input asp-for="EnterDate" class="form-control" />
+                <span asp-validation-for="EnterDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeliverId" class="control-label"></label>
+                <select asp-for="DeliverId" class="form-control" asp-items="ViewBag.DeliverId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoryId" class="control-label"></label>
+                <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-offset-2 col-sm-12 text-right">
+                    <a asp-action="Index" class="btn btn-secondary">
+                        <i class="fa fa-arrow-circle-left"></i>
+                        Ortga
+                    </a>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-align-left fa-save"></i>
+                        O'zgartrish
+                    </button>
+                </div>
+            </div>
+          </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

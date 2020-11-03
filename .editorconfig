@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS2001: Source file 'E:\Create Programs\Asp.Net MVC\Market.Server\Market.Server\.....Constanta\PageList.cs' could not be found.
+dotnet_diagnostic.CS2001.severity = error
