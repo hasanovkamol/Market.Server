@@ -39,7 +39,8 @@ namespace Market.Server
                 .AddRoleManager<RoleManager<IdentityRole>>()
                 .AddDefaultTokenProviders()
                 .AddEntityFrameworkStores<MarketContext>();
-
+         
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddAuthentication();
 
             services.AddControllersWithViews();
